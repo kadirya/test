@@ -26,8 +26,37 @@ public class singleton07 {
                     System.out.println(singleton07.getInstance().hashCode())
             ).start();
 
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+    {
+
+    }
+
+
 
 
 
