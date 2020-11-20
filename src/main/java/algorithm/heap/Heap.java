@@ -1,7 +1,14 @@
 package algorithm.heap;
 
 import algorithm.heap.Heap.MyMaxHeap.RightMaxHeap;
+//
 
+/**
+ * 堆首先是完全二叉树
+ * 大根堆：每一个子树的根节点永远比孩子节点大
+ * 小根堆：每一个子树的根节点永远比孩子节点小
+ * n个节点的树，高度为logN
+ */
 public class Heap {
     public static class MyMaxHeap{
         private int[] heap;
@@ -30,6 +37,7 @@ public class Heap {
            heapInsert(heap,heapSize++);
         }
 
+        //一个一个加入元素
         private void heapInsert(int[] heap, int index) {
             //arr[index] 不比 arr[index父]大了就停
             int rootIndex = (index-1)/2;
@@ -67,7 +75,7 @@ public class Heap {
             }
         }
 
-        private void swap(int[] heap, int index, int rootIndex) {
+        public void swap(int[] heap, int index, int rootIndex) {
             int temp = heap[index];
             heap[index] = heap[rootIndex];
             heap[rootIndex] = temp;
